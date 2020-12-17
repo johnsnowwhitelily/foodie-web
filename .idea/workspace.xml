@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fabca1d4-de2e-4d30-8c23-9493c5378779" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lBHwHnn6GwXLuXfl5L2L9xWVop" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fabca1d4-de2e-4d30-8c23-9493c5378779" name="Default Changelist" comment="" />
+      <created>1607063800745</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607063800745</updated>
+      <workItem from="1607063801842" duration="300000" />
+      <workItem from="1607064102678" duration="11010000" />
+      <workItem from="1607236560683" duration="17535000" />
+      <workItem from="1607483461822" duration="3333000" />
+      <workItem from="1608193523876" duration="694000" />
+      <workItem from="1608194317447" duration="360000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="102" key="#SSH_Configurations" timestamp="1607064037098">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="304" y="102" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1607064037098" />
+    <state x="442" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607076614790">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="442" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1607076614790" />
+    <state x="100" y="100" width="1240" height="700" key="DirDiffDialog" timestamp="1607064368645">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DirDiffDialog/0.0.1440.900@0.0.1440.900" timestamp="1607064368645" />
+    <state x="539" y="380" key="NewPhpFileDialog" timestamp="1607082032595">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="539" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1607082032595" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1607495716237">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1607495716237" />
+  </component>
+</project>
