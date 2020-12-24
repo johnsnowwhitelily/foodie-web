@@ -1,1 +1,4 @@
-# foodie-web
+# ShoppingMall
+Flask+Vue+MySQL
+
+
