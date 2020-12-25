@@ -8,12 +8,14 @@
                :width="isCollapse ? '60' : '60'"
                height="60" />
         </div>
-        <template ><i class="el-icon-menu" @click="toggleSideBar"></i>
-             </template>
+
         <el-menu router
                  :default-active="$route.path"
                 :collapse="isCollapse"
->
+><el-button  v-on:click="toggleSideBar"
+             style="margin-left: 0.2rem;
+        margin-top: 0.1rem"><i class="el-icon-menu" ></i>
+           </el-button>
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-s-goods"></i>
                <span>商品管理</span></template>
