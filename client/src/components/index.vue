@@ -2,35 +2,48 @@
   <div id="app">
 <!--    <el-header></el-header>-->
     <el-container style="height: 100%; border: 1px solid #eee">
-      <el-aside width="15%" style="background-color: rgb(238, 241, 246)">
+      <el-aside width="auto" style="background-color: rgb(238, 241, 246)">
         <div class="app-side-logo">
           <img src="@/assets/logo.png"
                :width="isCollapse ? '60' : '60'"
                height="60" />
         </div>
+        <template ><i class="el-icon-menu" @click="toggleSideBar"></i>
+             </template>
         <el-menu router
-                 :default-active="$route.path">
+                 :default-active="$route.path"
+                :collapse="isCollapse"
+>
           <el-submenu index="1">
-            <template slot="title"><i class="el-icon-message"></i>商品管理</template>
+            <template slot="title"><i class="el-icon-s-goods"></i>
+               <span>商品管理</span></template>
             <el-menu-item-group>
-              <el-menu-item index="/product/item">商品</el-menu-item>
-              <el-menu-item index="/product/cart">购物车</el-menu-item>
+              <el-menu-item index="/product/item">
+                   <span>商品</span></el-menu-item>
+              <el-menu-item index="/product/cart">
+                   <span>购物车</span></el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="2">
-            <template slot="title"><i class="el-icon-message"></i>订单管理</template>
+            <template slot="title"><i class="el-icon-s-order"></i>
+                 <span>订单管理</span></template>
             <el-menu-item-group>
-              <el-menu-item index="/order/order">订单</el-menu-item>
+              <el-menu-item index="/order/order">
+                <span>订单</span></el-menu-item>
 <!--              <el-menu-item index="/order/item">订单条目</el-menu-item>-->
 <!--              <el-menu-item index="/order/payment">支付信息</el-menu-item>-->
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">
-            <template slot="title"><i class="el-icon-message"></i>用户管理</template>
+            <template slot="title"><i class="el-icon-s-custom"></i>
+              <span>用户管理</span></template>
             <el-menu-item-group>
-              <el-menu-item index="/user/baseinfo">修改密码</el-menu-item>
-              <el-menu-item index="/user/userinfo">个人资料</el-menu-item>
-              <el-menu-item index="/user/usermanage">用户管理</el-menu-item>
+              <el-menu-item index="/user/baseinfo">
+                <span>修改密码</span></el-menu-item>
+              <el-menu-item index="/user/userinfo">
+                <span>个人资料</span></el-menu-item>
+              <el-menu-item index="/user/usermanage">
+                <span>用户管理</span></el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -77,6 +90,7 @@
         /*统一设置高度为100%*/
         height: 100%;
     }
+
 </style>
 
 <script>
@@ -87,11 +101,13 @@ export default {
     return {
       username: '',
       isCollapse: false,
+      screenWidth: document.body.clientWidth, // 屏幕宽度
+      timer: false,
     }
   },
   methods: {
     toggleSideBar() {
-      this.isCollapse = !this.isCollapse
+      this.isCollapse = !this.isCollapse;
     },
     logout: function () {
       this.$confirm('确认退出?', '提示', {})
@@ -117,6 +133,41 @@ export default {
     let user = sessionStorage.getItem('user');
     if (user) {
       this.username = user;
+    }
+
+    // 监听窗口大小
+    window.onresize = () => {
+      return (() => {
+        this.screenWidth = document.body.clientWidth
+      })()
+    }
+
+  },
+  computed: {
+    isCollapse: {
+      get () {
+        return this.screenWidth < 768
+      },
+      set () {
+      }
+    }
+  },
+  watch: {
+    screenWidth (val) {
+      if (!this.timer) {
+        this.screenWidth = val
+        if (this.screenWidth < 768) {
+          this.isCollapse = true
+        }
+        if (this.screenWidth > 768) {
+          this.isCollapse = false
+        }
+        this.timer = true
+        let that = this
+        setTimeout(function () {
+          that.timer = false
+        }, 400)
+      }
     }
   },
 }
