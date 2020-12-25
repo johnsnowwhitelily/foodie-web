@@ -1,8 +1,8 @@
 <template>
   <div id="app">
 <!--    <el-header></el-header>-->
-    <el-container style="height: 500px; border: 1px solid #eee">
-      <el-aside width="160px" style="background-color: rgb(238, 241, 246)">
+    <el-container style="height: 100%; border: 1px solid #eee">
+      <el-aside width="18%" style="background-color: rgb(238, 241, 246)">
         <div class="app-side-logo">
           <img src="@/assets/logo.png"
                :width="isCollapse ? '60' : '60'"
@@ -61,10 +61,23 @@
         <router-view></router-view>
       </el-main>
       </el-container>
-
   </el-container>
 </div>
 </template>
+<style type="text/css">
+/*
+	找到html标签、body标签，和挂载的标签
+	都给他们统一设置样式
+*/
+  html,body,#app,.el-container{
+        /*设置内部填充为0，几个布局元素之间没有间距*/
+        padding: 0px;
+         /*外部间距也是如此设置*/
+        margin: 0px;
+        /*统一设置高度为100%*/
+        height: 100%;
+    }
+</style>
 
 <script>
 export default {
@@ -109,9 +122,3 @@ export default {
 }
 </script>
 
-<style>
-  .el-header{
-    height: 60px,
-
-  }
-</style>
