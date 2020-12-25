@@ -3,6 +3,8 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import and_
 
+from models import *
+
 import random
 import timeit
 import time
@@ -19,7 +21,11 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+<<<<<<< Updated upstream
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:123456@localhost:3306/mall_system?charset=utf8'
+=======
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:zhangjunqi@localhost:3306/mall_system?charset=utf8'
+>>>>>>> Stashed changes
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_ECHO'] = True  # 显示错误信息
 app.config['SQLALCHEMY_RECORD_QUERIES'] = True  # 启用查询记录
@@ -636,6 +642,36 @@ def authority_update():
         return jsonify({"code": 400})
 
     return jsonify({"code": 200})
+
+@app.route('/forum/blog', methods=['GET', 'POST'])
+def blog_details():
+    results = db.session.query(Blog.blog_id, Blog.image_url, Blog.info).all()
+
+    ret = []
+    for result in results:
+        ans = {}
+        ans['blog_id'] = result[0]
+        ans['image_url'] = result[1]
+        ans['info'] = result[2]
+        ret.append(ans)
+
+    return jsonify(ret)
+
+@app.route('/forum/blog/add', methods=['GET', 'POST'])
+def blog_add():
+    info = request.json.get('info')
+    image_url = request.json.get('image_url')
+
+    new_blog = Blog(image_url, info)
+    if not image_url=="":
+        new_blog.image_url = image_url
+    else:
+        new_blog.image_url = 'https://images.app.goo.gl/hvLRkx7csuWWcK6a8'
+
+    db.session.add(new_blog)
+    db.session.commit()
+
+    return jsonify("success!")
 
 def create_data():
     # 创建用户
