@@ -188,14 +188,3 @@ class Payment(db.Model):
         self.payment_no = payment_no
         self.payment_method = payment_method
         self.payment_status = payment_status
-
-
-class Blog(db.Model):
-    __tablename__ = "blog"
-    blog_id = db.Column(db.String(6), primary_key=True, nullable=False)
-    image_url = db.Column(db.String(400))
-    info = db.Column(db.String(200)) #描述信息
-
-    def __init__(self, image_url, info):
-        self.image_url = image_url
-        self.info = info
