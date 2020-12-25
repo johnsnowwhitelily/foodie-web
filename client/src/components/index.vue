@@ -5,7 +5,7 @@
       <el-aside width="auto" style="background-color: rgb(238, 241, 246)">
         <div class="app-side-logo">
           <img src="@/assets/logo.png"
-               :width="isCollapse ? '60' : '60'"
+               :width=auto
                height="60" />
         </div>
 
@@ -58,6 +58,7 @@
                        :hide-on-click="false">
             <span class="el-dropdown-link">
               {{ username }}
+              <span> ,欢迎访问 Ball Life 官网！</span>
               <i class="el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown">
