@@ -2,7 +2,7 @@
   <body id="login">
     <el-card class="box-card">
         <div slot="header" class="clearfix" align="center">
-          <span>Basketball</span>
+          <span>Ball Life</span>
         </div>
         <el-col :span="15" :offset="3">
           <el-form label-position="right" label-width="100px">
