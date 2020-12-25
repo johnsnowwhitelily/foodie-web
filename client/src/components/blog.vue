@@ -22,7 +22,7 @@
     <el-main>
       <el-table :data="tableData">
         <el-table-column prop="image_url" align="center" min-width="40">
-          <template scope="scope">
+          <template slot-scope="scope">
             <img :src="scope.row.image_url" width="120" height="90" class="head_pic"/>
           </template>
         </el-table-column>
