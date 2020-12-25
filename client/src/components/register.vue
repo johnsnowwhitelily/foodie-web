@@ -2,7 +2,7 @@
   <body id="register">
     <el-card class="box-card">
         <div slot="header" class="clearfix" align="center">
-          <span>电商平台</span>
+          <span>Basketball</span>
         </div>
         <el-col :span="15" :offset="3">
           <el-form label-position="right" label-width="100px">
@@ -129,10 +129,12 @@
   }
 
   .box-card {
-    width: 480px;
-    height: 350px;
-    margin-left: 25%;
-    margin-top: 2%;
+    padding:20px 50px;
+    width: 30%;
+    height: auto ;
+    margin: 0 auto ;
+    margin-top: 10%;
+    text-align: center;
   }
   .el-button {
     margin-left: 60px;

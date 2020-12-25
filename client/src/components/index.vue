@@ -2,7 +2,7 @@
   <div id="app">
 <!--    <el-header></el-header>-->
     <el-container style="height: 100%; border: 1px solid #eee">
-      <el-aside width="18%" style="background-color: rgb(238, 241, 246)">
+      <el-aside width="15%" style="background-color: rgb(238, 241, 246)">
         <div class="app-side-logo">
           <img src="@/assets/logo.png"
                :width="isCollapse ? '60' : '60'"
