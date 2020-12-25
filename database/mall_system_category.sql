@@ -38,7 +38,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1001,'家用电器','这是一个商品类别'),(1002,'食品','这是一个商品类别'),(1003,'电子产品','包含各类电子产品'),(1004,'书籍','包括各类教材辅导书以及诗歌小说电子书'),(1005,'饮料','供人或者牲畜饮用的液体'),(1006,'水果','营养丰富的植物果实'),(1007,'服饰','各类衣裤、鞋袜等');
+INSERT INTO `category` VALUES (1001,'鞋类','这是鞋类'),(1002,'裤子','这是裤子'),(1003,'衬衫','这是衬衫'),(1004,'外套','这是外套'),(1005,'帽子','这是帽子类'),(1006,'篮球','包含各种篮球'),(1007,'其他','其他篮球装备等等');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -42,7 +42,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'root','fcea920f7412b5da7be0cf42b8c93759','823875304@qq.com','0','2019-01-01 00:00:00'),(2,'碎竹落棋','6c39e0596266b72953d7fb890acffcde','12345678@qq.com','2','2020-01-01 00:00:00'),(3,'manager1','e10adc3949ba59abbe56e057f20f883e','7777777@163.com','1','2020-04-02 00:00:00'),(6,'小明','e10adc3949ba59abbe56e057f20f883e','1234567@gmail.com','2','2020-04-29 19:03:06'),(7,'演示1号','e10adc3949ba59abbe56e057f20f883e','1567843219@qq.com','2','2020-04-30 09:04:59'),(8,'演示2号','fcea920f7412b5da7be0cf42b8c93759','897654362@qq.com','2','2020-05-01 18:38:14'),(9,'测试1号','e10adc3949ba59abbe56e057f20f883e','12345678@qq.com','2','2020-05-01 18:47:36');
+INSERT INTO `user` VALUES (1,'root','fcea920f7412b5da7be0cf42b8c93759','823875304@qq.com','0','2020-12-12 00:00:00');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

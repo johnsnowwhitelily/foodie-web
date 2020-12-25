@@ -44,7 +44,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,1003,'iphone 12','https://s1.ax1x.com/2020/04/29/J7W9TP.jpg','最新款iphone',8000.00,'1'),(2,1003,'v30 pro','https://s1.ax1x.com/2020/04/29/J7WZOs.jpg','荣耀系列5G力作',4000.00,'1'),(3,1002,'零食大礼包','https://s1.ax1x.com/2020/04/29/J7R5LR.jpg','这是一个商品',100.00,'1'),(4,1001,'滚筒洗衣机','https://s1.ax1x.com/2020/04/29/J72vV0.jpg','这是一个商品',5600.00,'1'),(5,1006,'桃子','https://s1.ax1x.com/2020/04/29/J7RLWD.jpg','新鲜采摘，可口美味',10.00,'1'),(8,1005,'可乐','https://s1.ax1x.com/2020/04/29/J7Wg0I.jpg','快乐翻倍',3.50,'1');
+INSERT INTO `product` VALUES (1,1001,'Air Jordan1 倒钩','https://s3.ax1x.com/2020/12/25/rWdP7q.jpg','Travis Scott联名',8000.00,'1'),(2,1002,'Nike 休闲运动裤','https://s3.ax1x.com/2020/12/25/rWdoCT.jpg','Fear of God×NBA联名版',4000.00,'1'),(3,1003,'休闲衬衫','https://s3.ax1x.com/2020/12/25/rWwQMQ.jpg','JRs 男款 深蓝',100.00,'1'),(4,1004,'双面夹克','https://s3.ax1x.com/2020/12/25/rWwrZR.jpg',5600.00,'1'),(5,1005,'MLB LA/NY针织帽','https://s3.ax1x.com/2020/12/25/rWbk9K.jpg','冷帽 绒线帽',199.00,'1'),(6,1007,'Nike Swoosh头带','https://s3.ax1x.com/2020/12/25/rWBFAI.jpg','Nike 黑色 一条装',110,'1'),(7,1006,'【圣诞推荐】SPALDING篮球','https://s3.ax1x.com/2020/12/25/rW0mwR.jpg','反光内外炫酷 耐磨 礼盒装',380,'1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
