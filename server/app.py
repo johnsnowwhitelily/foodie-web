@@ -3,8 +3,6 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import and_
 
-from models import *
-
 import random
 import timeit
 import time
@@ -21,19 +19,16 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-<<<<<<< Updated upstream
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:123456@localhost:3306/mall_system?charset=utf8'
-=======
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:zhangjunqi@localhost:3306/mall_system?charset=utf8'
->>>>>>> Stashed changes
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_ECHO'] = True  # 显示错误信息
 app.config['SQLALCHEMY_RECORD_QUERIES'] = True  # 启用查询记录
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True  # 追踪数据库修改
 app.config['SQLALCHEMY_POOL_SIZE'] = 100
 
-app.config['CORS_ORIGIN_ALLOW_ALL'] = True
-app.config['CORS_ALLOW_CREDENTIALS'] = True
+
+# app.config['CORS_ORIGIN_ALLOW_ALL'] = True
+# app.config['CORS_ALLOW_CREDENTIALS'] = True
 
 db = SQLAlchemy(app)
 
@@ -666,8 +661,7 @@ def blog_add():
     if not image_url=="":
         new_blog.image_url = image_url
     else:
-        new_blog.image_url = 'https://images.app.goo.gl/hvLRkx7csuWWcK6a8'
-
+        new_blog.image_url = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1124621307,1373233430&fm=26&gp=0.jpg'
     db.session.add(new_blog)
     db.session.commit()
 

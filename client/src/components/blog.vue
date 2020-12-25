@@ -23,7 +23,7 @@
       <el-table :data="tableData">
         <el-table-column prop="image_url" align="center" min-width="40">
           <template scope="scope">
-            <img :src="scope.row.image_url" width="120" height="90" class="head_pic"/>
+            <img :src="scope.row.image_url" width="160" height="120" class="head_pic"/>
           </template>
         </el-table-column>
         <el-table-column prop="info" align="center" min-width="60">
@@ -44,6 +44,7 @@
 
 <script>
     import axios from 'axios'
+    //axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
     export default {
       name: "blog_details",
       data() {
@@ -71,10 +72,10 @@
           method: 'post',
           url: url,
           data: data,
-          headers: {"Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS'}
         })
         .then((res)=>{
           console.log(res);
+          this.blog_info = '';
           this.getAllItems();
         })
         .catch(function (error) {

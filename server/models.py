@@ -192,10 +192,11 @@ class Payment(db.Model):
 
 class Blog(db.Model):
     __tablename__ = "blog"
-    blog_id = db.Column(db.String(6), primary_key=True, nullable=False)
+    blog_id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
     image_url = db.Column(db.String(400))
     info = db.Column(db.String(200)) #描述信息
 
     def __init__(self, image_url, info):
+        # self.blog_id = blog_id
         self.image_url = image_url
         self.info = info
