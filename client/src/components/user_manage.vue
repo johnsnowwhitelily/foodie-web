@@ -96,7 +96,7 @@
             user_id: this.selected_id,
             radio: this.radio,
           };
-          const url = "http://127.0.0.1:5000/user/authority/update";
+          const url = "http://localhost:5000/user/authority/update";
           axios.post(url,data).then((res)=>{
               if(parseInt(res.data.code)===200){
                 this.$message({

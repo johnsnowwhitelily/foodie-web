@@ -93,7 +93,6 @@
     position: fixed;
   }
   body{
-    margin: -8px;
     padding: 0;
   }
 
