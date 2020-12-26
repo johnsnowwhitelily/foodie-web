@@ -48,6 +48,14 @@
                 <span>用户管理</span></el-menu-item>
             </el-menu-item-group>
           </el-submenu>
+          <el-submenu index="4">
+            <template slot="title"><i class="el-icon-message"></i>
+            <span>论坛资讯</span></template>
+            <el-menu-item-group>
+               <el-menu-item index="/forum/blog">
+               <span>最新消息</span></el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-aside>
       <el-container>

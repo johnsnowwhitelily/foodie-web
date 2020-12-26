@@ -19,19 +19,20 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:cyt1999127@localhost:3306/mall_system?charset=utf8'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:hsgod129@localhost:3306/mall_system?charset=utf8'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_ECHO'] = True  # 显示错误信息
 app.config['SQLALCHEMY_RECORD_QUERIES'] = True  # 启用查询记录
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True  # 追踪数据库修改
 app.config['SQLALCHEMY_POOL_SIZE'] = 100
 
-app.config['CORS_ORIGIN_ALLOW_ALL'] = True
-app.config['CORS_ALLOW_CREDENTIALS'] = True
+
+# app.config['CORS_ORIGIN_ALLOW_ALL'] = True
+# app.config['CORS_ALLOW_CREDENTIALS'] = True
 
 db = SQLAlchemy(app)
 
-from server.models import *
+from models import *
 
 
 # db.drop_all()
@@ -636,6 +637,35 @@ def authority_update():
         return jsonify({"code": 400})
 
     return jsonify({"code": 200})
+
+@app.route('/forum/blog', methods=['GET', 'POST'])
+def blog_details():
+    results = db.session.query(Blog.blog_id, Blog.image_url, Blog.info).all()
+
+    ret = []
+    for result in results:
+        ans = {}
+        ans['blog_id'] = result[0]
+        ans['image_url'] = result[1]
+        ans['info'] = result[2]
+        ret.append(ans)
+
+    return jsonify(ret)
+
+@app.route('/forum/blog/add', methods=['GET', 'POST'])
+def blog_add():
+    info = request.json.get('info')
+    image_url = request.json.get('image_url')
+
+    new_blog = Blog(image_url, info)
+    if not image_url=="":
+        new_blog.image_url = image_url
+    else:
+        new_blog.image_url = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1124621307,1373233430&fm=26&gp=0.jpg'
+    db.session.add(new_blog)
+    db.session.commit()
+
+    return jsonify("success!")
 
 def create_data():
     # 创建用户

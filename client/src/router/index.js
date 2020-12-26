@@ -16,6 +16,7 @@ import order_details from "@/components/order_details"
 import userinfo from "@/components/userinfo"
 import baseinfo from "@/components/baseinfo"
 import user_manage from "@/components/user_manage"
+import blog from "@/components/blog"
 
 Vue.use(Router);
 
@@ -100,8 +101,11 @@ const routes = [
       name: 'user_manage',
       component: user_manage
     },
-
-
+    {
+      path: '/forum/blog',
+      name: 'blog',
+      component: blog
+    },
 ];
 
 const router = new Router({
