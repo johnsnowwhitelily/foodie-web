@@ -76,6 +76,10 @@
         .then((res)=>{
           console.log(res);
           this.getAllItems();
+          this.$message({
+                message: "发布成功!",
+                type: 'success'
+            });
         })
         .catch(function (error) {
             console.log(headers, error);
