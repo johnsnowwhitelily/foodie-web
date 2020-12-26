@@ -661,7 +661,7 @@ def blog_add():
     if not image_url=="":
         new_blog.image_url = image_url
     else:
-        new_blog.image_url = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1124621307,1373233430&fm=26&gp=0.jpg'
+        new_blog.image_url = 'https://s3.ax1x.com/2020/12/26/rhBTxK.jpg'
     db.session.add(new_blog)
     db.session.commit()
 
