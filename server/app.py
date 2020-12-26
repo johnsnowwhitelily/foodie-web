@@ -19,7 +19,7 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:123456@localhost:3306/mall_system?charset=utf8'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:cyt1999127@localhost:3306/mall_system?charset=utf8'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_ECHO'] = True  # 显示错误信息
 app.config['SQLALCHEMY_RECORD_QUERIES'] = True  # 启用查询记录
@@ -31,7 +31,7 @@ app.config['CORS_ALLOW_CREDENTIALS'] = True
 
 db = SQLAlchemy(app)
 
-from models import *
+from server.models import *
 
 
 # db.drop_all()
